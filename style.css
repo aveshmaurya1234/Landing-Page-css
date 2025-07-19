@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=My+Soul&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Broken+Fax&family=Rubik+Glitch+Pop&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
 *{
     padding: 0;
     margin: 0;
+    font-family: "Roboto", sans-serif;
+
 }
 
 html,body{
@@ -10,15 +13,21 @@ html,body{
 
 .main{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 }
 .top{
-    position: relative;
     width: 100%;
-    height: 60%;
+    min-height: 60vh;
     background-image: url(img7.webp);
     background-size: cover;
     background-position:center;
+}
+
+.overlay{
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+    /* background-color: red; */
 }
 .text{
     position: absolute;
@@ -26,12 +35,12 @@ html,body{
     width: 80%;
     padding: 0 10vw;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .text h1{
-    font-size: 500;
-    font-size: 3vw;
-
+    font-weight: 500;
+    font-size: 2.5vw;
 }
 .right{
     display: flex;
@@ -46,25 +55,29 @@ html,body{
 }
 .right i{
     padding: 5px;
+    cursor: pointer;
 }
 .bottom{
     width: 100%;
-    height: 40%;
+    min-height: 40vh;
     background-color:green;
     display: flex;
 }
 
 .b1{
-    width: 25%;
-    height: 87%;
+    width: 30%;
+    min-height: inherit;
     background-color:grey;
-    padding-top: 30px;
-    padding-left:30px ;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .note{
     display: flex;
-    padding-top: 20px;
+    padding: 10px 0;
+    width: 85%;
+    align-items: center;
 }
 .note .photo{
     width: 50px;
@@ -77,43 +90,111 @@ html,body{
     padding: 0 10px;
     width: 70%;
 }
+
+
 .b2{
-    width: 25%;
-    height: 100%;
+    width: 23%;
+    min-height: inherit;
     background-image: url(img2.webp);
     background-size: cover;
-    background-position: center ;
+    background-position: bottom ;
 }
+
+
 .b3{
     width: 20%;
-    height: 100%;
+    min-height: inherit;
+    background-color: #fff;
+}
+
+.bleft{
+    width: 100%;
+    min-height: 20vh;
+    /* background-color:rgba(255, 0, 0, 0.826); */
     background-color: blue;
 }
-.bleft{
+.bleft h2{
+    padding-left: 15px;
     padding-top: 10px;
-    padding-left: 24px;
-    width: 90%;
-    height: 45%;
-    background-color:rgba(255, 0, 0, 0.826);
 }
 .bleft p{
     font-size: 12px;
+    padding: 0 20px;
 }
 .bright{
     width: 100%;
-    height: 50%;
+    min-height: 20vh;
     background-image: url(img3.jpg);
     background-size: cover;
-
+    background-color: #fff;
 }
-.b4{
-    width: 30%;
-    height: 70%;
-    background-image: url(img4.jpg);
-    background-size: cover;
-    background-position: top;
-    padding-top: 70px;
-    padding-left: 28px;
-    color: black;
 
+
+.b4{
+    width: 27%; 
+    min-height: inherit; 
+    background-image: url(img4.jpg); 
+    background-size: cover;
+    background-position:center; 
+    color: black;
+}
+.b4 .latest{
+    width: 75%;
+    padding-top: 55px;
+    padding-left: 10px;
+}
+.b4 .latest h3{
+    padding: 15px 0;
+}
+
+@media (max-width:500px) {
+    .overlay .text{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:space-between; 
+        bottom: 10%;
+    }
+    .overlay .text h1{
+        font-size: 6.5vw;
+    }
+    .overlay .text .right{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .overlay .text .right p{
+        width: initial;
+        margin-top: 20px;
+    }
+    .overlay .text .right .icon{
+        margin-top: 30px;
+    }
+
+    .bottom{
+        flex-direction: column;
+    }
+    .b1{
+        width: 100%;
+    }
+    .b2{
+        width: 100%;
+        height: 70vh;
+        background-position:bottom;
+    }
+    .b3{
+        flex-direction: column;
+        width: 100%;
+        /* height: 70vh; */
+    }
+
+    .b3 .bright{
+        width: 100%;
+        min-height: 50vh;
+        background-size: cover;
+        background-position:top ;
+    }
+    .b4{
+        width: 100%;
+    }
+
+    
 }
